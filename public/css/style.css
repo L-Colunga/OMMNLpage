@@ -353,12 +353,17 @@ img {
 
 }
 
-.footer input[type='email']{
+.footer .card .footer-form div{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer input[type='email'], input[type='name']{
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 20px 0;
+    margin: 0px 0;
 }
 /* Utility Classes */
 .container {

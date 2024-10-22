@@ -27,6 +27,9 @@ app.use(expressLayouts)
 app.use(express.static('public'))
 
 const mssql = require("mssql");
+
+// Codigo para conseguir datos de la base de datos
+
 mssql.connect(config).then(() => {
     console.log("Connected to the database!");
 
@@ -41,6 +44,42 @@ mssql.connect(config).then(() => {
 })
 
 
+//Codigo para dar datos a la SQL
+
+/*
+mssql.connect(config).then(() => {
+    console.log("Connected to the database!");
+
+    // Create Request object to perform query operation
+    const query = `INSERT INTO Users(Name, Email) VALUES ('Diego Albertus', '123@hotmail.com')`;
+
+    // Query the database and get the records
+    mssql.query(query);
+
+    console.log('Data has been submitted successfully.');
+}).catch((err) => {
+    console.error('SQL error:', err);
+})
+*/
+
+/*
+app.post('/submit', async (req, res) => {
+    try {
+        // Connect to the SQL Server
+        await mssql.connect(config);
+
+        // SQL query to insert data
+        const query = `INSERT INTO Users(Name, Email) VALUES ('${req.body.name}', '${req.body.email}')`;
+        
+        await mssql.query(query);
+
+        res.send('Data has been submitted successfully.');
+    } catch (err) {
+        console.error('SQL error:', err);
+        res.status(500).send('Failed to submit data.');
+    }
+});
+*/
 app.use('/', indexRouter)
 
 app.listen(process.env.PORT || 3000)

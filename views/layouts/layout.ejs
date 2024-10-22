@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css"> 
     <link rel="shortcut icon" href = "images/favicon.ico" type="image/x-icon"/>
-
-    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <nav class="navbar">
@@ -300,13 +298,22 @@
                         <p class="text-sm">
                             Subscribanse plslslslsls
                         </p>
-                        <form>
-                            <input type="email" id="email" placeholder="Enter your email">
-                            <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+                        <form class="footer-form" action="/submit" method="POST">
+                            <div>
+                                <label for="name">Nombre Completo:</label>
+                                <input type="name" id="name" name="name" required>
+                            </div>
+                            <div>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" email="email" required>   
+                            </div>
+                            <button class = "btn btn-block" type="submit">Submit</button>
                         </form>
                     </div>
                     <i class="fab fa-twitter"></i>
                 </div>
+                
+                
                 <div>
                     <h4>Company</h4>
                     <ul>
