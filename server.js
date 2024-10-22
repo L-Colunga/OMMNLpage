@@ -34,7 +34,7 @@ mssql.connect(config).then(() => {
     const request = new mssql.Request();
 
     // Query the database and get the records
-    return request.query('SELECT * FROM Exams');
+    return request.query('SELECT * FROM Users');
 }).then((result) => {
     // Send records as a response to the browser
     console.log(result.recordset);
