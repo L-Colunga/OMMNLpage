@@ -1,15 +1,339 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mybrary</title>
+    <title>Olympiad Math App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="shortcut icon" href = "images/favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    Before
-    <br>
-    <%- body %>
-    <br>
-    After
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" width="100" height="100" alt="logo">
+                </a>
+
+                <a href="index.html" class = "text-lg">NL OMM</a>
+            </div>
+
+            <div class="main-menu">
+                <ul>
+                    <li>
+                        <a href="#Hero">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#Examenes">Examenes</a>
+                    </li>
+                    <li>
+                        <a href="#Eventos">Eventos</a>
+                    </li>
+                    <li>
+                        <a href="#">Donaciones</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-dark" href="#">
+                            <i class="fas fa-user"></i> Formar parte!
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero -->
+     <section class = "hero">
+        <div class ="container" id="Hero">
+            <div class= "hero-content">
+                <h1 class="hero-name text-weight-lighter">
+                    Nuevo Leon
+                </h1>
+                <h1 class="hero-heading text-xxl">
+                    Olimpiada Mexicana de Matemáticas
+                </h1>
+                <p class = "hero-text">
+                    Bienvenidos al equipo olímpico para la OMM en Nuevo Leon.  Descubre como él equipó se ha ido formando, y aprende razónes de porqué deberías de formar parte.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#Descripcion" class="btn btn-primary">
+                        ¡Descubrelo!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Descripcion-->
+    <section class="desc">
+        <div class="container" id="Descripcion">
+            <div class="desc-content">
+                <ul>
+                    <li>
+                        <h2 class = "text-xl">
+                            Historia
+                        </h2>
+                        <p>
+                            La Olimpiada Mexicana de Matemáticas (OMM) fue fundada en 1987 para promover el talento matemático entre estudiantes de secundaria y preparatoria en México
+                        </p>
+                    </li>
+                    <li>
+                        <h2 class = "text-xl">
+                            Nuestro Plan
+                        </h2>
+                        <p>
+                            Organizada por la Sociedad Matemática Mexicana, la OMM busca motivar el aprendizaje y desarrollo de habilidades matemáticas a través de concursos estatales y nacionales. Los ganadores representan a México en competencias internacionales como la Olimpiada Internacional de Matemáticas (IMO) y la Olimpiada Iberoamericana. Desde la  creación de la OMM, esté ha sido un semillero de talentos, contribuyendo al avance de las matemáticas en el país.
+                        </p>
+                    </li>
+                    <li>
+                        <h2 class = "text-xl">
+                            Lo que podrías aprender
+                        </h2>
+                        <p>
+                            Desde la simplicidad de la teoría de números hasta la complejidad de la geometría, nuestros estudiantes aprenden a manejar todas las diferentes técnicas que existen en los diversos campos matemáticos,.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Video Section-->
+    <section class="video bg-black">
+        <div class="container-sm">
+            <h2 class="video-heading text-xl text-center">
+                Esta es una de las formas en las que vivimos nuestros dia a dia
+            </h2>
+        </div>
+        <div class="video-content">
+            <a href="#">
+                <img src="images/video-preview.png" alt="video" class="video-preview" />
+            </a>
+    
+            <a href="#" class="btn btn-primary">Forma parte!</a>
+        </div>
+        
+    </section>
+
+
+    <!-- Eventos -->
+    <section class="eventos bg-background">
+        <div class="container" id="Eventos">
+            <h2 class="eventos-heading text-xxl text-center">
+                Eventos
+            </h2>
+            <div class="eventos-grid">
+                <div class="card">
+                    <h2>
+                        21 y 22 de Sep: Examen Final
+                    </h2>
+
+                    <p>El fin de semana, del 21 al 22 de septiembre, se presentarán los exámenes semifinales para entrar al equipo de la OMM NL. Los unicos que pueden participar son los de la siguiente lista. </p>
+                    <p></p>
+                </div>
+
+                <div class="card">
+                    <h2>
+                        19 de Sep: Repaso General 
+                    </h2>
+
+                    <p>Para los que siguen teniendo problemas con los problemas de teoría de números, pueden participar en un pequeño repaso general sobre los tipos de soluciones que hay. </p>
+                    <p></p>
+                </div>
+
+                <div class="card">
+                    <h2>
+                        10 de Sep: Examen semifinal 
+                    </h2>
+
+                    <p>El día 10 de septiembre se presentara el examen semifinal de la OMMNL. Los de la siguiente lista pueden participar. </p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Examenes -->
+    <section class="exa bg-background">
+        <div class="container-sm" id="Examenes">
+            <h2 class="text-xxl text-center">
+                Exámenes pasados
+            </h2>
+
+            <p class="text-md text-center" >¿Como desea buscar los exámenes?</p>
+            <ul class="exa-menu">
+                <li class="active">Nivel Cadetes</li>
+                <li>Nivel Semi-Final</li>
+                <li>Nivel Final</li>
+            </ul>
+            
+            <div class="exa-grid">
+                <div class="exa-encontrados">
+                    <h2>
+                        Examenes encontrados
+                    </h2>
+                    <select class = "exa-scroll" size="3">  
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                    </select>    
+                </div>
+                
+                <div class="exa-division">
+                
+                </div>
+
+                <div class="exa-content">
+                    <h2 class="text-md">
+                        ¿Cual año te gustaría investigar?
+                    </h2>
+
+                    <select class = "exa-año" size="3">  
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="button">
+                <a class = "btn btn-dark text-center" href="Test.pdf" download="Examen">
+                    Descargar Examen
+                </a>
+            </div>
+            
+        </div>
+
+    </section>
+
+    
+
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="container-sm">
+            <h3 class="pricing-heading text-xl text-center">
+                Pricing
+            </h3>
+            <p class="pricing-subheading text-md text-center">
+                Pricing in the woods
+            </p>
+
+            <div class="pricing-grid">
+                <!-- Pricing Card 1-->
+                <div class="card bg-light">
+                    <div class="pricing-card-header">
+                        <h4 class="pricing-heading text-xl">
+                            Simple
+                        </h4>
+                        <p class="pricing-card-subheading">
+                            Palabras chidas siempre
+                        </p>
+                        <p class="prcing-card-price">
+                            <span class="text-xl">Free</span>
+                            *No se ocupa pagar
+                        </p>
+                    </div>
+                    <div class="pricing-card-body">
+                        <ul>
+                            <li>
+                                <i class="fas fa-check"></i> Real-Time Monitoring
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Bruh momento
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-block"> Get Started</a>
+                    </div>
+                </div>
+                <!-- Pricing Card 2-->
+                
+                <div class="card bg-dark">
+                    <div class="pricing-card-header">
+                        <h4 class="pricing-heading text-xl">
+                            Complex
+                        </h4>
+                        <p class="pricing-card-subheading">
+                            2 Palabras chidas siempre
+                        </p>
+                        <p class="prcing-card-price">
+                            <span class="text-xl">1000</span>
+                            Se ocupa pagar
+                        </p>
+                    </div>
+                    <div class="pricing-card-body">
+                        <ul>
+                            <li>
+                                <i class="fas fa-check"></i> Fake-Time Monitoring
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> Momento Bruh
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-block"> Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <p class="pricing-footer text-center">
+                Todo lo que se lee aqui ya lo checare despues
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-black">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html">
+                        <img src="images/logo.png" width="100" height="100" alt="logo">
+                    </a>
+                    <div class="card">
+                        <h4>Subscribe to OMM Nuevo Leon</h4>
+                        <p class="text-sm">
+                            Subscribanse plslslslsls
+                        </p>
+                        <form>
+                            <input type="email" id="email" placeholder="Enter your email">
+                            <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+                        </form>
+                    </div>
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Process</a></li>
+                        <li><a href="#">Join our Team</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Noticias</a></li>
+                        <li><a href="#">Muerte</a></li>
+                        <li><a href="#">Ya no más</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contactos</h4>
+                    <ul>
+                        <li>
+                            <a href="#">OMM@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
