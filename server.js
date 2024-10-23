@@ -27,7 +27,10 @@ app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
 app.use(expressLayouts)
 app.use(express.static(path.join(__dirname, 'public')))
-app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(bodyParser.json());
+
+//app.use(bodyParser.urlencoded({ extended: true }));
 
 const mssql = require("mssql");
 
@@ -72,10 +75,24 @@ app.post('/submit', async (req, res) => {
     try {     
         console.log(req.body.name)
         console.log(req.body.email)
+        res.send('Data has been submitted successfully.')
     } catch (err) {
         console.error('SQL error:', err);
+        res.status(500).send('Failed to submit data.')
     }
 });
+
+app.post('/exam', async (req, res) => {
+    console.log(req.body)
+    try {     
+        console.log(req.body.change)
+        res.send('Data has been submitted successfully.')
+    } catch (err) {
+        console.error('SQL error:', err);
+        res.status(500).send('Failed to submit data.')
+    }
+})
+
 /*
 app.post('/submit', async (req, res) => {
     try {
@@ -96,4 +113,4 @@ app.post('/submit', async (req, res) => {
 */
 app.use('/', indexRouter)
 
-app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 4000)
