@@ -46,7 +46,7 @@ export function ChangeMenu(e, exaMenu, groupHeader) {
 
 export async function ChangeExam(e, groupHeader) {
     const formData = {
-        change: groupHeader.value,
+        change: groupHeader.innerHTML,
     };
     try {
         // Make asynchronous request to the server using Fetch API
@@ -58,16 +58,8 @@ export async function ChangeExam(e, groupHeader) {
             body: JSON.stringify(formData)
         });
 
-        const result = await response.text(); // Get the response from the server
-        console.log(result)
-        // Display the result on the same page
-        /*
-        document.getElementById('resultMessage').innerHTML = `<p>${result}</p>`;
-
-        //Erase the submit button
-        document.getElementById('footer-form-btn').classList.toggle('disappear')
-        */
-
+        const result = await response.text();
+        
     } catch (error) {
         console.error('Error:', error);
     }

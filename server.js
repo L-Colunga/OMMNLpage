@@ -82,14 +82,36 @@ app.post('/submit', async (req, res) => {
     }
 });
 
+/*
 app.post('/exam', async (req, res) => {
     console.log(req.body)
-    try {     
+    try {    
         console.log(req.body.change)
         res.send('Data has been submitted successfully.')
     } catch (err) {
         console.error('SQL error:', err);
         res.status(500).send('Failed to submit data.')
+    }
+})
+*/
+
+
+app.post('/exam', async (req, res) => {
+    console.log(req.body)
+    try {
+        // Connect to the database
+        let pool = await mssql.connect(config);
+    
+        // Execute a query (example query)
+        let result = await pool.request()
+            .query('SELECT * FROM Exams'); // Replace with your query
+    
+        console.log(result.recordset); // Log the result
+    
+        // Close the connection
+        await pool.close();
+    } catch (err) {
+        console.error('SQL error', err);
     }
 })
 
