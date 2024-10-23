@@ -5,6 +5,8 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
+const path = require('path')
+const bodyParser = require('body-parser')
 
 const config = {
     user: 'Examapp',
@@ -24,12 +26,14 @@ app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
 app.use(expressLayouts)
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const mssql = require("mssql");
 
 // Codigo para conseguir datos de la base de datos
 
+/*
 mssql.connect(config).then(() => {
     console.log("Connected to the database!");
 
@@ -37,12 +41,12 @@ mssql.connect(config).then(() => {
     const request = new mssql.Request();
 
     // Query the database and get the records
-    return request.query('SELECT * FROM Users');
+    return request.query('SELECT * FROM Exams');
 }).then((result) => {
     // Send records as a response to the browser
     console.log(result.recordset);
 })
-
+*/
 
 //Codigo para dar datos a la SQL
 
@@ -62,6 +66,16 @@ mssql.connect(config).then(() => {
 })
 */
 
+//Codigo para conseguir la informacion del HTML
+app.post('/submit', async (req, res) => {
+    console.log(req.body)
+    try {     
+        console.log(req.body.name)
+        console.log(req.body.email)
+    } catch (err) {
+        console.error('SQL error:', err);
+    }
+});
 /*
 app.post('/submit', async (req, res) => {
     try {
