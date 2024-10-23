@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     //Change the green color of the "Como desea buscar examenes menu".
     const exaMenu = document.querySelector('.exa-menu');
     exaMenu.addEventListener('click', (e) => {
-        ChangeMenu(e, exaMenu)
-        ChangeExam(e)
+        const groupHeader = e.target.closest('li');
+        ChangeMenu(e, exaMenu, groupHeader)
+        ChangeExam(e, groupHeader)
     })
 
     //Submit DataForm data 

@@ -30,8 +30,7 @@ export async function Dataform(e) {
     }
 }
 
-export function ChangeMenu(e, exaMenu) {
-    const groupHeader = e.target.closest('li');
+export function ChangeMenu(e, exaMenu, groupHeader) {
     console.log(groupHeader);
     if (!groupHeader) return;
     if (!groupHeader.classList.contains('active')) {
@@ -45,9 +44,9 @@ export function ChangeMenu(e, exaMenu) {
     });
 }
 
-export async function ChangeExam(e) {
+export async function ChangeExam(e, groupHeader) {
     const formData = {
-        change: "Hello",
+        change: groupHeader.value,
     };
     try {
         // Make asynchronous request to the server using Fetch API
